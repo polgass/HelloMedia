@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24D65ED8C56A73239AA75C35 /* Pods_HelloMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 682F56573A7613F7CA758ED5 /* Pods_HelloMedia.framework */; };
 		9C2714401E5828F400F5EB2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C27143F1E5828F400F5EB2D /* AppDelegate.swift */; };
 		9C2714421E5828F400F5EB2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2714411E5828F400F5EB2D /* ViewController.swift */; };
 		9C2714451E5828F400F5EB2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C2714431E5828F400F5EB2D /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0CC43F17FABC20622F0084EB /* Pods-HelloMedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloMedia.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloMedia/Pods-HelloMedia.release.xcconfig"; sourceTree = "<group>"; };
+		682F56573A7613F7CA758ED5 /* Pods_HelloMedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloMedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C27143C1E5828F400F5EB2D /* HelloMedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloMedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C27143F1E5828F400F5EB2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C2714411E5828F400F5EB2D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		9C2714461E5828F400F5EB2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C2714491E5828F400F5EB2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C27144B1E5828F400F5EB2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DBADB834217C5E2DDE47B58 /* Pods-HelloMedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloMedia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloMedia/Pods-HelloMedia.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24D65ED8C56A73239AA75C35 /* Pods_HelloMedia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D5E90C3053394E3FCAA3B9B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9DBADB834217C5E2DDE47B58 /* Pods-HelloMedia.debug.xcconfig */,
+				0CC43F17FABC20622F0084EB /* Pods-HelloMedia.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6FC43A056E46B5715BD2EDED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				682F56573A7613F7CA758ED5 /* Pods_HelloMedia.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9C2714331E5828F400F5EB2D = {
 			isa = PBXGroup;
 			children = (
 				9C27143E1E5828F400F5EB2D /* HelloMedia */,
 				9C27143D1E5828F400F5EB2D /* Products */,
+				4D5E90C3053394E3FCAA3B9B /* Pods */,
+				6FC43A056E46B5715BD2EDED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9C27144E1E5828F400F5EB2D /* Build configuration list for PBXNativeTarget "HelloMedia" */;
 			buildPhases = (
+				C03EA77D191DE1B166FF7F12 /* [CP] Check Pods Manifest.lock */,
 				9C2714381E5828F400F5EB2D /* Sources */,
 				9C2714391E5828F400F5EB2D /* Frameworks */,
 				9C27143A1E5828F400F5EB2D /* Resources */,
+				F6799EE04E532C5D776A90E4 /* [CP] Embed Pods Frameworks */,
+				3F536B2C64785D918770FD3D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3F536B2C64785D918770FD3D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HelloMedia/Pods-HelloMedia-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C03EA77D191DE1B166FF7F12 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F6799EE04E532C5D776A90E4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HelloMedia/Pods-HelloMedia-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9C2714381E5828F400F5EB2D /* Sources */ = {
@@ -256,6 +331,7 @@
 		};
 		9C27144F1E5828F400F5EB2D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DBADB834217C5E2DDE47B58 /* Pods-HelloMedia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HelloMedia/Info.plist;
@@ -268,6 +344,7 @@
 		};
 		9C2714501E5828F400F5EB2D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CC43F17FABC20622F0084EB /* Pods-HelloMedia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HelloMedia/Info.plist;
