@@ -9,6 +9,7 @@
 import Foundation
 
 typealias SuccessErrorCompletion = (_ success: Bool, _ error: Error?) -> ()
+typealias UserErrorCompletion = (_ user: User?, _ error: Error?) -> ()
 
 class SessionClient {
   let service: SessionService
@@ -22,6 +23,10 @@ class SessionClient {
   }
   
   func logout(completion: @escaping SuccessErrorCompletion) {
-    
+    service.logout(completion: completion)
+  }
+  
+  func getProfile(completion: @escaping UserErrorCompletion) {
+    service.getProfile(completion: completion)
   }
 }

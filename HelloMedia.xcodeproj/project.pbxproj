@@ -17,6 +17,10 @@
 		9C6521861E584C6F00D03E78 /* FacebookSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6521851E584C6F00D03E78 /* FacebookSessionService.swift */; };
 		9C65218C1E58502F00D03E78 /* SessionClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C65218B1E58502F00D03E78 /* SessionClient.swift */; };
 		9C65218E1E58603C00D03E78 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C65218D1E58603C00D03E78 /* WelcomeViewController.swift */; };
+		9C6521901E5870B900D03E78 /* FacebookProfileRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C65218F1E5870B900D03E78 /* FacebookProfileRequest.swift */; };
+		9C6521951E58735900D03E78 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6521941E58735900D03E78 /* Extensions.swift */; };
+		9C6521971E58758500D03E78 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6521961E58758500D03E78 /* User.swift */; };
+		9C6521991E58910B00D03E78 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6521981E58910B00D03E78 /* Helper.swift */; };
 		9CF29BB61E583469004E2D92 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF29BB51E583469004E2D92 /* ButtonView.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +38,10 @@
 		9C6521851E584C6F00D03E78 /* FacebookSessionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookSessionService.swift; sourceTree = "<group>"; };
 		9C65218B1E58502F00D03E78 /* SessionClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionClient.swift; sourceTree = "<group>"; };
 		9C65218D1E58603C00D03E78 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		9C65218F1E5870B900D03E78 /* FacebookProfileRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookProfileRequest.swift; sourceTree = "<group>"; };
+		9C6521941E58735900D03E78 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		9C6521961E58758500D03E78 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9C6521981E58910B00D03E78 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		9CF29BB51E583469004E2D92 /* ButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		9DBADB834217C5E2DDE47B58 /* Pods-HelloMedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloMedia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloMedia/Pods-HelloMedia.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +100,7 @@
 				9C2714551E582E2E00F5EB2D /* Controllers */,
 				9C2714521E582DF200F5EB2D /* Layouts */,
 				9CF29BB41E583423004E2D92 /* Views */,
+				9C6521931E58734100D03E78 /* Helpers */,
 				9C2714511E582DE200F5EB2D /* Other */,
 				9C2714531E582DFD00F5EB2D /* Supporting Files */,
 				9C2714461E5828F400F5EB2D /* Assets.xcassets */,
@@ -130,6 +139,8 @@
 				9C6521831E584C3900D03E78 /* SessionService.swift */,
 				9C6521851E584C6F00D03E78 /* FacebookSessionService.swift */,
 				9C65218B1E58502F00D03E78 /* SessionClient.swift */,
+				9C65218F1E5870B900D03E78 /* FacebookProfileRequest.swift */,
+				9C6521961E58758500D03E78 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -141,6 +152,15 @@
 				9C65218D1E58603C00D03E78 /* WelcomeViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9C6521931E58734100D03E78 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9C6521941E58735900D03E78 /* Extensions.swift */,
+				9C6521981E58910B00D03E78 /* Helper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		9CF29BB41E583423004E2D92 /* Views */ = {
@@ -274,12 +294,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C6521991E58910B00D03E78 /* Helper.swift in Sources */,
 				9C2714571E582FBA00F5EB2D /* LoginViewController.swift in Sources */,
+				9C6521951E58735900D03E78 /* Extensions.swift in Sources */,
 				9C2714401E5828F400F5EB2D /* AppDelegate.swift in Sources */,
 				9CF29BB61E583469004E2D92 /* ButtonView.swift in Sources */,
+				9C6521901E5870B900D03E78 /* FacebookProfileRequest.swift in Sources */,
 				9C65218C1E58502F00D03E78 /* SessionClient.swift in Sources */,
 				9C6521841E584C3900D03E78 /* SessionService.swift in Sources */,
 				9C6521861E584C6F00D03E78 /* FacebookSessionService.swift in Sources */,
+				9C6521971E58758500D03E78 /* User.swift in Sources */,
 				9C65218E1E58603C00D03E78 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

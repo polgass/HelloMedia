@@ -11,4 +11,5 @@ import Foundation
 protocol SessionService {
   func login(completion: @escaping SuccessErrorCompletion)
   func logout(completion: @escaping SuccessErrorCompletion)
+  func getProfile(completion: @escaping UserErrorCompletion)
 }

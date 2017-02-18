@@ -8,10 +8,12 @@
 
 import Foundation
 import FacebookLogin
+import FacebookCore
 
 class FacebookSessionService: SessionService {
   
   // MARK:- Properties
+  let loginManager = LoginManager()
   let sourceViewController: UIViewController
   
   // MARK:- Initializers
@@ -19,9 +21,8 @@ class FacebookSessionService: SessionService {
     self.sourceViewController = sourceViewController
   }
   
-  // MARK:- Public methods
+  // MARK:- Protocol methods
   func login(completion: @escaping (Bool, Error?) -> ()) {
-    let loginManager = LoginManager()
     loginManager.logIn(readPermissions: [.publicProfile, .email], viewController: sourceViewController) { loginResult in
       switch loginResult {
       case .failed(let error):
@@ -35,6 +36,21 @@ class FacebookSessionService: SessionService {
   }
   
   func logout(completion: @escaping (Bool, Error?) -> ()) {
-    
+    loginManager.logOut()
+    UserDefaults.standard.removeObject(forKey: "currentUser")
+    completion(true, nil)
+  }
+  
+  func getProfile(completion: @escaping UserErrorCompletion) {
+    let connection = GraphRequestConnection()
+    connection.add(FacebookProfileRequest()) { response, result in
+      switch result {
+      case .success(let response):
+        completion(response.user, nil)
+      case .failed(let error):
+        completion(nil, error)
+      }
+    }
+    connection.start()
   }
 }
