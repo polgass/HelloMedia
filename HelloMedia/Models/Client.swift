@@ -11,10 +11,10 @@ import Foundation
 typealias SuccessErrorCompletion = (_ success: Bool, _ error: Error?) -> ()
 typealias UserErrorCompletion = (_ user: User?, _ error: Error?) -> ()
 
-class SessionClient {
-  let service: SessionService
+class Client {
+  let service: Service
   
-  init(service: SessionService) {
+  init(service: Service) {
     self.service = service
   }
   

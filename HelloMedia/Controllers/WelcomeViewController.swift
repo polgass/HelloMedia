@@ -24,6 +24,13 @@ class WelcomeViewController: UIViewController {
     displayData()
   }
   
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "WelcomeToChatScreenSegue",
+      let chatVC = segue.destination as? ChatViewController {
+      chatVC.user = user
+    }
+  }
+  
   // MARK:- Private methods
   func displayData() {
     // name
@@ -54,7 +61,7 @@ class WelcomeViewController: UIViewController {
   
   //MARK:- Actions
   @IBAction func logoutTapped(_ sender: Any) {
-    let client = SessionClient(service: FacebookSessionService(sourceViewController: self))
+    let client = Client(service: FacebookService(sourceViewController: self))
     client.logout { [weak self] (success, error) in
       guard let weakSelf = self else { return }
       if success {
@@ -64,7 +71,7 @@ class WelcomeViewController: UIViewController {
   }
   
   @IBAction func chatTapped(_ sender: Any) {
-    
+    performSegue(withIdentifier: "WelcomeToChatScreenSegue", sender: nil)
   }
   
 }

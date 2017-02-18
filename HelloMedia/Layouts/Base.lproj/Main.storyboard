@@ -129,10 +129,10 @@
             </objects>
             <point key="canvasLocation" x="2868" y="121.88905547226388"/>
         </scene>
-        <!--View Controller-->
+        <!--Chat View Controller-->
         <scene sceneID="e8F-ii-xTd">
             <objects>
-                <viewController id="t5f-jc-oI5" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="t5f-jc-oI5" customClass="ChatViewController" customModule="HelloMedia" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RxP-S6-xjh"/>
                         <viewControllerLayoutGuide type="bottom" id="rj9-8b-Fvl"/>
@@ -140,8 +140,29 @@
                     <view key="view" contentMode="scaleToFill" id="FAM-T6-c3u">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uyY-Wd-3HO">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="t5f-jc-oI5" id="BOd-03-anf"/>
+                                    <outlet property="delegate" destination="t5f-jc-oI5" id="WcO-vG-to4"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uyY-Wd-3HO" firstAttribute="top" secondItem="RxP-S6-xjh" secondAttribute="bottom" id="Ecs-Vn-ktZ"/>
+                            <constraint firstItem="uyY-Wd-3HO" firstAttribute="leading" secondItem="FAM-T6-c3u" secondAttribute="leading" id="M41-wb-g1b"/>
+                            <constraint firstItem="rj9-8b-Fvl" firstAttribute="top" secondItem="uyY-Wd-3HO" secondAttribute="bottom" id="Toh-4e-gUn"/>
+                            <constraint firstAttribute="trailing" secondItem="uyY-Wd-3HO" secondAttribute="trailing" id="lRF-wc-hCB"/>
+                        </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="uyY-Wd-3HO" id="rSG-hU-Cfw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Do0-Ss-xsU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

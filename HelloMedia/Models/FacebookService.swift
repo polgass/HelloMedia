@@ -10,7 +10,7 @@ import Foundation
 import FacebookLogin
 import FacebookCore
 
-class FacebookSessionService: SessionService {
+class FacebookService: Service {
   
   // MARK:- Properties
   let loginManager = LoginManager()

@@ -11,11 +11,11 @@ import Firebase
 
 class User: NSObject, NSCoding {
   
-  let uid: String?
-  let firstName: String?
-  let lastName: String?
-  let email: String?
-  let photoUrl: String?
+  var uid: String?
+  var firstName: String?
+  var lastName: String?
+  var email: String?
+  var photoUrl: String?
   
   init(authData: FIRUser) {
     uid = authData.uid

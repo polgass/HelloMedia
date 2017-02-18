@@ -13,14 +13,20 @@
 		9C2714471E5828F400F5EB2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C2714461E5828F400F5EB2D /* Assets.xcassets */; };
 		9C27144A1E5828F400F5EB2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C2714481E5828F400F5EB2D /* LaunchScreen.storyboard */; };
 		9C2714571E582FBA00F5EB2D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2714561E582FBA00F5EB2D /* LoginViewController.swift */; };
-		9C6521841E584C3900D03E78 /* SessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6521831E584C3900D03E78 /* SessionService.swift */; };
-		9C6521861E584C6F00D03E78 /* FacebookSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6521851E584C6F00D03E78 /* FacebookSessionService.swift */; };
-		9C65218C1E58502F00D03E78 /* SessionClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C65218B1E58502F00D03E78 /* SessionClient.swift */; };
+		9C6521841E584C3900D03E78 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6521831E584C3900D03E78 /* Service.swift */; };
+		9C6521861E584C6F00D03E78 /* FacebookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6521851E584C6F00D03E78 /* FacebookService.swift */; };
+		9C65218C1E58502F00D03E78 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C65218B1E58502F00D03E78 /* Client.swift */; };
 		9C65218E1E58603C00D03E78 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C65218D1E58603C00D03E78 /* WelcomeViewController.swift */; };
 		9C6521901E5870B900D03E78 /* FacebookProfileRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C65218F1E5870B900D03E78 /* FacebookProfileRequest.swift */; };
 		9C6521951E58735900D03E78 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6521941E58735900D03E78 /* Extensions.swift */; };
 		9C6521971E58758500D03E78 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6521961E58758500D03E78 /* User.swift */; };
 		9C6521991E58910B00D03E78 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6521981E58910B00D03E78 /* Helper.swift */; };
+		9C65219B1E589D1200D03E78 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C65219A1E589D1200D03E78 /* GoogleService-Info.plist */; };
+		9C65219D1E58A02000D03E78 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C65219C1E58A02000D03E78 /* ChatMessage.swift */; };
+		9C6521A11E58A13400D03E78 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6521A01E58A13400D03E78 /* ChatViewController.swift */; };
+		9C6521A61E58A5A100D03E78 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6521A41E58A5A100D03E78 /* MessageCell.swift */; };
+		9C6521A71E58A5A100D03E78 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C6521A51E58A5A100D03E78 /* MessageCell.xib */; };
+		9C6521A91E58CBA000D03E78 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6521A81E58CBA000D03E78 /* FirebaseService.swift */; };
 		9CF29BB61E583469004E2D92 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF29BB51E583469004E2D92 /* ButtonView.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,14 +40,20 @@
 		9C2714491E5828F400F5EB2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C27144B1E5828F400F5EB2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C2714561E582FBA00F5EB2D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		9C6521831E584C3900D03E78 /* SessionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionService.swift; sourceTree = "<group>"; };
-		9C6521851E584C6F00D03E78 /* FacebookSessionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookSessionService.swift; sourceTree = "<group>"; };
-		9C65218B1E58502F00D03E78 /* SessionClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionClient.swift; sourceTree = "<group>"; };
+		9C6521831E584C3900D03E78 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		9C6521851E584C6F00D03E78 /* FacebookService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookService.swift; sourceTree = "<group>"; };
+		9C65218B1E58502F00D03E78 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		9C65218D1E58603C00D03E78 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		9C65218F1E5870B900D03E78 /* FacebookProfileRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookProfileRequest.swift; sourceTree = "<group>"; };
 		9C6521941E58735900D03E78 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		9C6521961E58758500D03E78 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9C6521981E58910B00D03E78 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		9C65219A1E589D1200D03E78 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9C65219C1E58A02000D03E78 /* ChatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
+		9C6521A01E58A13400D03E78 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		9C6521A41E58A5A100D03E78 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		9C6521A51E58A5A100D03E78 /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MessageCell.xib; path = /Users/paulsevilla/Developer/HelloMedia/HelloMedia/Layouts/MessageCell.xib; sourceTree = "<absolute>"; };
+		9C6521A81E58CBA000D03E78 /* FirebaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		9CF29BB51E583469004E2D92 /* ButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		9DBADB834217C5E2DDE47B58 /* Pods-HelloMedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloMedia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloMedia/Pods-HelloMedia.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,6 +133,7 @@
 			children = (
 				9C2714431E5828F400F5EB2D /* Main.storyboard */,
 				9C2714481E5828F400F5EB2D /* LaunchScreen.storyboard */,
+				9C6521A51E58A5A100D03E78 /* MessageCell.xib */,
 			);
 			path = Layouts;
 			sourceTree = "<group>";
@@ -128,6 +141,7 @@
 		9C2714531E582DFD00F5EB2D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9C65219A1E589D1200D03E78 /* GoogleService-Info.plist */,
 				9C27144B1E5828F400F5EB2D /* Info.plist */,
 			);
 			path = "Supporting Files";
@@ -136,11 +150,13 @@
 		9C2714541E582E2700F5EB2D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9C6521831E584C3900D03E78 /* SessionService.swift */,
-				9C6521851E584C6F00D03E78 /* FacebookSessionService.swift */,
-				9C65218B1E58502F00D03E78 /* SessionClient.swift */,
+				9C6521831E584C3900D03E78 /* Service.swift */,
+				9C6521851E584C6F00D03E78 /* FacebookService.swift */,
+				9C6521A81E58CBA000D03E78 /* FirebaseService.swift */,
+				9C65218B1E58502F00D03E78 /* Client.swift */,
 				9C65218F1E5870B900D03E78 /* FacebookProfileRequest.swift */,
 				9C6521961E58758500D03E78 /* User.swift */,
+				9C65219C1E58A02000D03E78 /* ChatMessage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -150,6 +166,7 @@
 			children = (
 				9C2714561E582FBA00F5EB2D /* LoginViewController.swift */,
 				9C65218D1E58603C00D03E78 /* WelcomeViewController.swift */,
+				9C6521A01E58A13400D03E78 /* ChatViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -167,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				9CF29BB51E583469004E2D92 /* ButtonView.swift */,
+				9C6521A41E58A5A100D03E78 /* MessageCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -233,7 +251,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C6521A71E58A5A100D03E78 /* MessageCell.xib in Resources */,
 				9C27144A1E5828F400F5EB2D /* LaunchScreen.storyboard in Resources */,
+				9C65219B1E589D1200D03E78 /* GoogleService-Info.plist in Resources */,
 				9C2714471E5828F400F5EB2D /* Assets.xcassets in Resources */,
 				9C2714451E5828F400F5EB2D /* Main.storyboard in Resources */,
 			);
@@ -295,16 +315,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C6521991E58910B00D03E78 /* Helper.swift in Sources */,
+				9C6521A91E58CBA000D03E78 /* FirebaseService.swift in Sources */,
 				9C2714571E582FBA00F5EB2D /* LoginViewController.swift in Sources */,
 				9C6521951E58735900D03E78 /* Extensions.swift in Sources */,
 				9C2714401E5828F400F5EB2D /* AppDelegate.swift in Sources */,
 				9CF29BB61E583469004E2D92 /* ButtonView.swift in Sources */,
 				9C6521901E5870B900D03E78 /* FacebookProfileRequest.swift in Sources */,
-				9C65218C1E58502F00D03E78 /* SessionClient.swift in Sources */,
-				9C6521841E584C3900D03E78 /* SessionService.swift in Sources */,
-				9C6521861E584C6F00D03E78 /* FacebookSessionService.swift in Sources */,
+				9C65218C1E58502F00D03E78 /* Client.swift in Sources */,
+				9C6521841E584C3900D03E78 /* Service.swift in Sources */,
+				9C6521861E584C6F00D03E78 /* FacebookService.swift in Sources */,
+				9C6521A11E58A13400D03E78 /* ChatViewController.swift in Sources */,
+				9C65219D1E58A02000D03E78 /* ChatMessage.swift in Sources */,
 				9C6521971E58758500D03E78 /* User.swift in Sources */,
 				9C65218E1E58603C00D03E78 /* WelcomeViewController.swift in Sources */,
+				9C6521A61E58A5A100D03E78 /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

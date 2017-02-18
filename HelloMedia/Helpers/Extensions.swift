@@ -22,3 +22,11 @@ extension UIImageView {
     }
   }
 }
+
+extension Date {
+  func toString() -> String {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "MMddyyyy'T'HH:mm:ss"
+    return dateFormatter.string(from: self)
+  }
+}
