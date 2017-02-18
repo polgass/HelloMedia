@@ -8,17 +8,27 @@
 
 import UIKit
 
+protocol ButtonViewDelegate {
+  func submit()
+}
+
 class ButtonView: UIView {
   
   // MARK:- Properties
-  var buttonTitle = String()
+  var buttonTitle = String() {
+    didSet {
+      updateTitle()
+    }
+  }
+  
+  var delegate: ButtonViewDelegate!
   
   private var button: UIButton!
   private var activityIndicator: UIActivityIndicatorView!
   
-  var isAnimating = false {
+  var startActivity = false {
     didSet {
-      startActivity()
+      start()
     }
   }
   
@@ -32,7 +42,6 @@ class ButtonView: UIView {
   private func initializeButton() {
     // button
     button = UIButton()
-    button.setTitle(buttonTitle, for: .normal)
     button.setTitleColor(UIColor.black, for: .normal)
     button.titleLabel?.font = UIFont(name: "HelveticaNeue", size: 15)
     
@@ -63,16 +72,23 @@ class ButtonView: UIView {
     NSLayoutConstraint(item: activityIndicator, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1.60, constant: 0.0).isActive = true
   }
   
-  private func startActivity() {
-    if isAnimating {
+  private func start() {
+    button.isEnabled = !startActivity
+    if startActivity {
       activityIndicator.startAnimating()
     } else {
       activityIndicator.stopAnimating()
     }
   }
   
-  // MARK:- Button actions
+  private func updateTitle() {
+    button.setTitle(buttonTitle, for: .normal)
+  }
+  
+  // MARK:- Button target methods
   @objc func buttonTapped(button: UIButton) {
-    print("tapped")
+    if let delegate = delegate {
+      delegate.submit()
+    }
   }
 }

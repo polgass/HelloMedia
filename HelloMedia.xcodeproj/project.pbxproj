@@ -13,6 +13,10 @@
 		9C2714471E5828F400F5EB2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C2714461E5828F400F5EB2D /* Assets.xcassets */; };
 		9C27144A1E5828F400F5EB2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C2714481E5828F400F5EB2D /* LaunchScreen.storyboard */; };
 		9C2714571E582FBA00F5EB2D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2714561E582FBA00F5EB2D /* LoginViewController.swift */; };
+		9C6521841E584C3900D03E78 /* SessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6521831E584C3900D03E78 /* SessionService.swift */; };
+		9C6521861E584C6F00D03E78 /* FacebookSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6521851E584C6F00D03E78 /* FacebookSessionService.swift */; };
+		9C65218C1E58502F00D03E78 /* SessionClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C65218B1E58502F00D03E78 /* SessionClient.swift */; };
+		9C65218E1E58603C00D03E78 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C65218D1E58603C00D03E78 /* WelcomeViewController.swift */; };
 		9CF29BB61E583469004E2D92 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF29BB51E583469004E2D92 /* ButtonView.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +30,10 @@
 		9C2714491E5828F400F5EB2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C27144B1E5828F400F5EB2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C2714561E582FBA00F5EB2D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9C6521831E584C3900D03E78 /* SessionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionService.swift; sourceTree = "<group>"; };
+		9C6521851E584C6F00D03E78 /* FacebookSessionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookSessionService.swift; sourceTree = "<group>"; };
+		9C65218B1E58502F00D03E78 /* SessionClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionClient.swift; sourceTree = "<group>"; };
+		9C65218D1E58603C00D03E78 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		9CF29BB51E583469004E2D92 /* ButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		9DBADB834217C5E2DDE47B58 /* Pods-HelloMedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloMedia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloMedia/Pods-HelloMedia.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,10 +88,10 @@
 		9C27143E1E5828F400F5EB2D /* HelloMedia */ = {
 			isa = PBXGroup;
 			children = (
-				9CF29BB41E583423004E2D92 /* Views */,
 				9C2714541E582E2700F5EB2D /* Models */,
 				9C2714551E582E2E00F5EB2D /* Controllers */,
 				9C2714521E582DF200F5EB2D /* Layouts */,
+				9CF29BB41E583423004E2D92 /* Views */,
 				9C2714511E582DE200F5EB2D /* Other */,
 				9C2714531E582DFD00F5EB2D /* Supporting Files */,
 				9C2714461E5828F400F5EB2D /* Assets.xcassets */,
@@ -119,6 +127,9 @@
 		9C2714541E582E2700F5EB2D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9C6521831E584C3900D03E78 /* SessionService.swift */,
+				9C6521851E584C6F00D03E78 /* FacebookSessionService.swift */,
+				9C65218B1E58502F00D03E78 /* SessionClient.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -127,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				9C2714561E582FBA00F5EB2D /* LoginViewController.swift */,
+				9C65218D1E58603C00D03E78 /* WelcomeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -265,6 +277,10 @@
 				9C2714571E582FBA00F5EB2D /* LoginViewController.swift in Sources */,
 				9C2714401E5828F400F5EB2D /* AppDelegate.swift in Sources */,
 				9CF29BB61E583469004E2D92 /* ButtonView.swift in Sources */,
+				9C65218C1E58502F00D03E78 /* SessionClient.swift in Sources */,
+				9C6521841E584C3900D03E78 /* SessionService.swift in Sources */,
+				9C6521861E584C6F00D03E78 /* FacebookSessionService.swift in Sources */,
+				9C65218E1E58603C00D03E78 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
