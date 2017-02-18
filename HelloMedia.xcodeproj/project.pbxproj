@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		24D65ED8C56A73239AA75C35 /* Pods_HelloMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 682F56573A7613F7CA758ED5 /* Pods_HelloMedia.framework */; };
 		9C2714401E5828F400F5EB2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C27143F1E5828F400F5EB2D /* AppDelegate.swift */; };
-		9C2714421E5828F400F5EB2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2714411E5828F400F5EB2D /* ViewController.swift */; };
 		9C2714451E5828F400F5EB2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C2714431E5828F400F5EB2D /* Main.storyboard */; };
 		9C2714471E5828F400F5EB2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C2714461E5828F400F5EB2D /* Assets.xcassets */; };
 		9C27144A1E5828F400F5EB2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C2714481E5828F400F5EB2D /* LaunchScreen.storyboard */; };
+		9C2714571E582FBA00F5EB2D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2714561E582FBA00F5EB2D /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,11 +20,11 @@
 		682F56573A7613F7CA758ED5 /* Pods_HelloMedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloMedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C27143C1E5828F400F5EB2D /* HelloMedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloMedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C27143F1E5828F400F5EB2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9C2714411E5828F400F5EB2D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9C2714441E5828F400F5EB2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9C2714461E5828F400F5EB2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C2714491E5828F400F5EB2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C27144B1E5828F400F5EB2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C2714561E582FBA00F5EB2D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9DBADB834217C5E2DDE47B58 /* Pods-HelloMedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloMedia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloMedia/Pods-HelloMedia.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,14 +78,54 @@
 		9C27143E1E5828F400F5EB2D /* HelloMedia */ = {
 			isa = PBXGroup;
 			children = (
-				9C27143F1E5828F400F5EB2D /* AppDelegate.swift */,
-				9C2714411E5828F400F5EB2D /* ViewController.swift */,
-				9C2714431E5828F400F5EB2D /* Main.storyboard */,
+				9C2714541E582E2700F5EB2D /* Models */,
+				9C2714551E582E2E00F5EB2D /* Controllers */,
+				9C2714521E582DF200F5EB2D /* Layouts */,
+				9C2714511E582DE200F5EB2D /* Other */,
+				9C2714531E582DFD00F5EB2D /* Supporting Files */,
 				9C2714461E5828F400F5EB2D /* Assets.xcassets */,
-				9C2714481E5828F400F5EB2D /* LaunchScreen.storyboard */,
-				9C27144B1E5828F400F5EB2D /* Info.plist */,
 			);
 			path = HelloMedia;
+			sourceTree = "<group>";
+		};
+		9C2714511E582DE200F5EB2D /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				9C27143F1E5828F400F5EB2D /* AppDelegate.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		9C2714521E582DF200F5EB2D /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				9C2714431E5828F400F5EB2D /* Main.storyboard */,
+				9C2714481E5828F400F5EB2D /* LaunchScreen.storyboard */,
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
+		9C2714531E582DFD00F5EB2D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9C27144B1E5828F400F5EB2D /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9C2714541E582E2700F5EB2D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9C2714551E582E2E00F5EB2D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9C2714561E582FBA00F5EB2D /* LoginViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,7 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C2714421E5828F400F5EB2D /* ViewController.swift in Sources */,
+				9C2714571E582FBA00F5EB2D /* LoginViewController.swift in Sources */,
 				9C2714401E5828F400F5EB2D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,7 +374,7 @@
 			baseConfigurationReference = 9DBADB834217C5E2DDE47B58 /* Pods-HelloMedia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = HelloMedia/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/HelloMedia/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.psevilla.HelloMedia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -347,7 +387,7 @@
 			baseConfigurationReference = 0CC43F17FABC20622F0084EB /* Pods-HelloMedia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = HelloMedia/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/HelloMedia/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.psevilla.HelloMedia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -374,6 +414,7 @@
 				9C2714501E5828F400F5EB2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
