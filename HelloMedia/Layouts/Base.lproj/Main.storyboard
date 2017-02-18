@@ -20,11 +20,28 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m0K-YM-vm5" customClass="ButtonView" customModule="HelloMedia" customModuleProvider="target">
+                                <rect key="frame" x="112.5" y="311" width="150" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="BYH-7Q-7my"/>
+                                    <constraint firstAttribute="height" constant="45" id="GFg-tJ-psB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="m0K-YM-vm5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Evp-sX-FKO"/>
+                            <constraint firstItem="m0K-YM-vm5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="RGZ-co-i5b"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonView" destination="m0K-YM-vm5" id="HjG-zl-Kvm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="121.88905547226388"/>
         </scene>
     </scenes>
 </document>
