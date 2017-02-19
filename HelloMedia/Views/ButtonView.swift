@@ -26,6 +26,11 @@ class ButtonView: UIView {
   private var button: UIButton!
   private var activityIndicator: UIActivityIndicatorView!
   
+  private let kFont = "HelveticaNeue"
+  private let kFontSize: CGFloat = 15.0
+  private let kButtonCornerRadius: CGFloat = 5.0
+  private let kMultiplier: CGFloat = 1.60
+  
   var startActivity = false {
     didSet {
       start()
@@ -43,10 +48,10 @@ class ButtonView: UIView {
     // button
     button = UIButton()
     button.setTitleColor(UIColor.black, for: .normal)
-    button.titleLabel?.font = UIFont(name: "HelveticaNeue", size: 15)
+    button.titleLabel?.font = UIFont(name: kFont, size: kFontSize)
     
-    button.layer.cornerRadius = 5.0
-    button.layer.borderWidth = 1.0
+    button.layer.cornerRadius = kButtonCornerRadius
+    button.layer.borderWidth = kCGFloatOne
     button.layer.borderColor = UIColor.lightGray.cgColor
     
     button.translatesAutoresizingMaskIntoConstraints = false
@@ -62,14 +67,14 @@ class ButtonView: UIView {
     
     // constraints
     // button
-    NSLayoutConstraint(item: button, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1.0, constant: 0.0).isActive = true
-    NSLayoutConstraint(item: button, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1.0, constant: 0.0).isActive = true
-    NSLayoutConstraint(item: button, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1.0, constant: 0.0).isActive = true
-    NSLayoutConstraint(item: button, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1.0, constant: 0.0).isActive = true
+    NSLayoutConstraint(item: button, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: kCGFloatOne, constant: kCGFloatZero).isActive = true
+    NSLayoutConstraint(item: button, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: kCGFloatOne, constant: kCGFloatZero).isActive = true
+    NSLayoutConstraint(item: button, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: kCGFloatOne, constant: kCGFloatZero).isActive = true
+    NSLayoutConstraint(item: button, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: kCGFloatOne, constant: kCGFloatZero).isActive = true
     
     // activity indicator
-    NSLayoutConstraint(item: activityIndicator, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1.0, constant: 0.0).isActive = true
-    NSLayoutConstraint(item: activityIndicator, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1.60, constant: 0.0).isActive = true
+    NSLayoutConstraint(item: activityIndicator, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: kCGFloatOne, constant: kCGFloatZero).isActive = true
+    NSLayoutConstraint(item: activityIndicator, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: kMultiplier, constant: kCGFloatZero).isActive = true
   }
   
   private func start() {
@@ -85,7 +90,7 @@ class ButtonView: UIView {
     button.setTitle(buttonTitle, for: .normal)
   }
   
-  // MARK:- Button target methods
+  // MARK:- Selectors
   @objc func buttonTapped(button: UIButton) {
     if let delegate = delegate {
       delegate.submit()

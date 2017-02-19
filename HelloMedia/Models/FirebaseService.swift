@@ -11,10 +11,22 @@ import Firebase
 import FacebookCore
 
 class FirebaseService: Service {
+  
+  /// Handles Firebase login
+  ///
+  /// - Parameter completion: The login callback function.
   func login(completion: @escaping SuccessErrorCompletion) {}
   
+  
+  /// Handles Fibrebase logout
+  ///
+  /// - Parameter completion: The logout callback function.
   func logout(completion: @escaping SuccessErrorCompletion) {}
   
+  
+  /// Handles Firebase profile fetch (with login)
+  ///
+  /// - Parameter completion: A callback function to handle user object.
   func getProfile(completion: @escaping UserErrorCompletion) {
     let credential = FIRFacebookAuthProvider.credential(withAccessToken: AccessToken.current!.authenticationToken)
     FIRAuth.auth()?.signIn(with: credential) { (user, error) in

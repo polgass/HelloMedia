@@ -37,7 +37,7 @@ class FacebookService: Service {
   
   func logout(completion: @escaping (Bool, Error?) -> ()) {
     loginManager.logOut()
-    UserDefaults.standard.removeObject(forKey: "currentUser")
+    UserDefaults.standard.removeObject(forKey: kCurrentUser)
     completion(true, nil)
   }
   

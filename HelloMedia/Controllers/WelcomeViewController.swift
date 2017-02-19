@@ -25,7 +25,7 @@ class WelcomeViewController: UIViewController {
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier == "WelcomeToChatScreenSegue",
+    if segue.identifier == kWelcomeToChat,
       let chatVC = segue.destination as? ChatViewController {
       chatVC.user = user
     }
@@ -42,7 +42,6 @@ class WelcomeViewController: UIViewController {
     if let lastName = user.lastName {
       name += "\(lastName)"
     }
-    name += "!"
     
     // email
     var email = String()
@@ -62,8 +61,10 @@ class WelcomeViewController: UIViewController {
   //MARK:- Actions
   @IBAction func logoutTapped(_ sender: Any) {
     let client = Client(service: FacebookService(sourceViewController: self))
+    
     client.logout { [weak self] (success, error) in
       guard let weakSelf = self else { return }
+      
       if success {
         weakSelf.dismiss(animated: true, completion: nil)
       }
@@ -71,7 +72,7 @@ class WelcomeViewController: UIViewController {
   }
   
   @IBAction func chatTapped(_ sender: Any) {
-    performSegue(withIdentifier: "WelcomeToChatScreenSegue", sender: nil)
+    performSegue(withIdentifier: kWelcomeToChat, sender: nil)
   }
   
 }

@@ -8,8 +8,23 @@
 
 import Foundation
 
+/// Interface for Facebook and Firebase services requests
 protocol Service {
+  
+  /// Login service
+  ///
+  /// - Parameter completion: The login callback function.
   func login(completion: @escaping SuccessErrorCompletion)
+  
+  
+  /// Logout service
+  ///
+  /// - Parameter completion: The logout callback function.
   func logout(completion: @escaping SuccessErrorCompletion)
+  
+  
+  /// Get user profile service
+  ///
+  /// - Parameter completion: A callback function to handle the user object.
   func getProfile(completion: @escaping UserErrorCompletion)
 }

@@ -30,9 +30,17 @@
                                     <constraint firstAttribute="height" constant="45" id="GFg-tJ-psB"/>
                                 </constraints>
                             </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login unsuccessful. Please try again." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2I-HH-gi6">
+                                <rect key="frame" x="36.5" y="236.5" width="301" height="20.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="H2I-HH-gi6" firstAttribute="centerX" secondItem="m0K-YM-vm5" secondAttribute="centerX" id="6x9-iB-afR"/>
+                            <constraint firstItem="m0K-YM-vm5" firstAttribute="top" secondItem="H2I-HH-gi6" secondAttribute="bottom" constant="54" id="ELG-96-JIc"/>
                             <constraint firstItem="m0K-YM-vm5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Evp-sX-FKO"/>
                             <constraint firstItem="m0K-YM-vm5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="RGZ-co-i5b"/>
                         </constraints>
@@ -40,6 +48,7 @@
                     <navigationItem key="navigationItem" id="7Ai-qG-5kG"/>
                     <connections>
                         <outlet property="buttonView" destination="m0K-YM-vm5" id="HjG-zl-Kvm"/>
+                        <outlet property="messageLabel" destination="H2I-HH-gi6" id="q5S-su-wMd"/>
                         <segue destination="aGr-Pi-Qxj" kind="presentation" identifier="LoginToWelcomeScreenSegue" id="GG2-mF-qWP"/>
                     </connections>
                 </viewController>

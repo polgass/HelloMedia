@@ -8,12 +8,12 @@
 
 import UIKit
 import FacebookCore
-import FacebookLogin
 
 class LoginViewController: UIViewController {
   
   // MARK: Outlets
   @IBOutlet weak var buttonView: ButtonView!
+  @IBOutlet weak var messageLabel: UILabel!
   
   // MARK:- Lifecycle
   override func viewDidLoad() {
@@ -23,16 +23,17 @@ class LoginViewController: UIViewController {
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
+    
     if let _ = AccessToken.current {
-      if let currentUser = Helper.getObject(key: "currentUser") as? User {
-        performSegue(withIdentifier: "LoginToWelcomeScreenSegue", sender: currentUser)
+      if let currentUser = Helper.getObject(key: kCurrentUser) as? User {
+        performSegue(withIdentifier: kLoginToWelcome, sender: currentUser)
       }
     }
   }
   
   // MARK:- Overrides
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier == "LoginToWelcomeScreenSegue",
+    if segue.identifier == kLoginToWelcome,
       let navigationController = segue.destination as? UINavigationController,
       let welcomeVC = navigationController.viewControllers.first as? WelcomeViewController,
       let user = sender as? User {
@@ -42,27 +43,30 @@ class LoginViewController: UIViewController {
   
   // MARK:- Private methods
   private func configureViews() {
-    buttonView.buttonTitle = "LOGIN"
+    buttonView.buttonTitle = kLogin
     buttonView.delegate = self
   }
   
   // MARK:- Internal methods
-  func firebaseLogin() {
+  func firebaseSync() {
     let firClient = Client(service: FirebaseService())
+    
     firClient.getProfile { [weak self] (user, error) in
+      
       guard let weakSelf = self, let user = user else { return }
       let uid = user.uid
       
       let fbClient = Client(service: FacebookService(sourceViewController: weakSelf))
+      
       fbClient.getProfile { [weak self] (user, error) in
         guard let weakSelf = self else { return }
         guard let user = user else { return }
         
         user.uid = uid
-        Helper.saveObject(key: "currentUser", object: user)
+        Helper.saveObject(key: kCurrentUser, object: user)
         
         weakSelf.buttonView.startActivity = false
-        weakSelf.performSegue(withIdentifier: "LoginToWelcomeScreenSegue", sender: user)
+        weakSelf.performSegue(withIdentifier: kLoginToWelcome, sender: user)
       }
     }
   }
@@ -72,16 +76,18 @@ class LoginViewController: UIViewController {
 extension LoginViewController: ButtonViewDelegate {
   func submit() {
     buttonView.startActivity = true
+    messageLabel.isHidden = true
     
-    let service = FacebookService(sourceViewController: self)
-    let client = Client(service: service)
+    let client = Client(service: FacebookService(sourceViewController: self))
     
     client.login { [weak self] (success, error) in
       guard let weakSelf = self else { return }
       
+      weakSelf.messageLabel.isHidden = success
+      
       if success {
         if AccessToken.current != nil {
-          weakSelf.firebaseLogin()
+          weakSelf.firebaseSync()
         }
       } else {
         weakSelf.buttonView.startActivity = false

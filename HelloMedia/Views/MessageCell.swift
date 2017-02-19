@@ -33,5 +33,4 @@ class MessageCell: UITableViewCell {
     emailLabel.text = chat.email
     messageLabel.text = chat.message
   }
-  
 }

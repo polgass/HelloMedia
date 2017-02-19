@@ -9,6 +9,8 @@
 import Foundation
 import Firebase
 
+
+/// Wrapper for chat messages
 struct ChatMessage {
   
   let key: String
@@ -17,6 +19,10 @@ struct ChatMessage {
   let message: String
   let ref: FIRDatabaseReference?
   
+  
+  /// Initializes a ChatMessage object from a Firebase snapshot
+  ///
+  /// - Parameter snapshot: The snapshot.
   init(snapshot: FIRDataSnapshot) {
     key = snapshot.key
     let snapshotValue = snapshot.value as! [String: AnyObject]
@@ -26,6 +32,14 @@ struct ChatMessage {
     ref = snapshot.ref
   }
   
+  
+  /// Initialized a ChatMessage object
+  ///
+  /// - Parameters:
+  ///   - name: The user's name.
+  ///   - email: The user's email.
+  ///   - message: The chat message.
+  ///   - key: The message key.
   init(name: String, email: String, message: String, key: String = "") {
     self.key = key
     self.name = name
@@ -34,6 +48,10 @@ struct ChatMessage {
     self.ref = nil
   }
   
+  
+  /// Converts a ChatMessage object to JSON
+  ///
+  /// - Returns: A JSON object.
   func toAnyObject() -> Any {
     return [
       "name": name,

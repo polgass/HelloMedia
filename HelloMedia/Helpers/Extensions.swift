@@ -10,10 +10,16 @@ import Foundation
 import UIKit
 
 extension UIImageView {
+  
+  /// Helper for displaying an image given a URL string.
+  ///
+  /// - Parameter string: The URL string.
   func imageForURLString(_ string: String) {
     if let url = URL(string: string) {
+      
       DispatchQueue.global().async { [weak self] in
         guard let weakSelf = self else { return }
+        
         let data = try? Data(contentsOf: url)
         DispatchQueue.main.async {
           weakSelf.image = UIImage(data: data!)
@@ -24,9 +30,14 @@ extension UIImageView {
 }
 
 extension Date {
+  
+  /// Helper for converting a Date object to string.
+  ///
+  /// - Returns: A date string with "MMddyyyy'T'HH:mm:ss" format.
   func toString() -> String {
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "MMddyyyy'T'HH:mm:ss"
+    
     return dateFormatter.string(from: self)
   }
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		24D65ED8C56A73239AA75C35 /* Pods_HelloMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 682F56573A7613F7CA758ED5 /* Pods_HelloMedia.framework */; };
+		9C25EC071E59257900849174 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C25EC061E59257900849174 /* Constants.swift */; };
 		9C2714401E5828F400F5EB2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C27143F1E5828F400F5EB2D /* AppDelegate.swift */; };
 		9C2714451E5828F400F5EB2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C2714431E5828F400F5EB2D /* Main.storyboard */; };
 		9C2714471E5828F400F5EB2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C2714461E5828F400F5EB2D /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		0CC43F17FABC20622F0084EB /* Pods-HelloMedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloMedia.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloMedia/Pods-HelloMedia.release.xcconfig"; sourceTree = "<group>"; };
 		682F56573A7613F7CA758ED5 /* Pods_HelloMedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloMedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C25EC061E59257900849174 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9C27143C1E5828F400F5EB2D /* HelloMedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloMedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C27143F1E5828F400F5EB2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C2714441E5828F400F5EB2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 			children = (
 				9C6521941E58735900D03E78 /* Extensions.swift */,
 				9C6521981E58910B00D03E78 /* Helper.swift */,
+				9C25EC061E59257900849174 /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				9C2714401E5828F400F5EB2D /* AppDelegate.swift in Sources */,
 				9CF29BB61E583469004E2D92 /* ButtonView.swift in Sources */,
 				9C6521901E5870B900D03E78 /* FacebookProfileRequest.swift in Sources */,
+				9C25EC071E59257900849174 /* Constants.swift in Sources */,
 				9C65218C1E58502F00D03E78 /* Client.swift in Sources */,
 				9C6521841E584C3900D03E78 /* Service.swift in Sources */,
 				9C6521861E584C6F00D03E78 /* FacebookService.swift in Sources */,

@@ -9,6 +9,7 @@
 import Foundation
 import FacebookCore
 
+/// Facebook graph request and response wrapper
 struct FacebookProfileRequest: GraphRequestProtocol {
   // MARK:- Properties
   var graphPath = "/me"
