@@ -11,17 +11,20 @@ import UIKit
 
 // MARK:- Titles/Label
 let kLogin = "LOGIN"
-let kChatAlertTitle = "Chat"
+let kChatTitle = "Chat"
 let kChatAlertSubtitle = "Send a new message"
 let kChatAlertSubtitleUpdate = "Update your message"
 let kChatAlertSend = "Send"
 let kChatAlertCancel = "Cancel"
+let kChatAdd = "Add"
+let kLoadingMessagesTitle = "Loading messages..."
 
 // MARK:- Constants
 let kCurrentUser = "currentUser"
 let kLoginToWelcome = "LoginToWelcomeScreenSegue"
 let kWelcomeToChat = "WelcomeToChatScreenSegue"
 let kReference = "chat-messages"
+let kMessageRef = "message"
 let kMessageCellIdentifier = "MessageCellIdentifier"
 
 let kCGFloatOne: CGFloat = 1.0

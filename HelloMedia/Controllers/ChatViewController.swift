@@ -21,6 +21,7 @@ class ChatViewController: UIViewController {
   
   var messages: [ChatMessage] = [] {
     didSet {
+      title = "Chat"
       tableView.reloadData()
     }
   }
@@ -41,7 +42,8 @@ class ChatViewController: UIViewController {
   }
   
   private func setupOtherViews() {
-    navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addTapped))
+    title = kLoadingMessagesTitle
+    navigationItem.rightBarButtonItem = UIBarButtonItem(title: kChatAdd, style: .plain, target: self, action: #selector(addTapped))
   }
   
   private func firObserve() {
@@ -63,7 +65,7 @@ class ChatViewController: UIViewController {
   
   // MARK:- Internal methods
   func addTapped() {
-    let alert = UIAlertController(title: kChatAlertTitle,
+    let alert = UIAlertController(title: kChatTitle,
                                   message: kChatAlertSubtitle,
                                   preferredStyle: .alert)
     
@@ -115,7 +117,7 @@ extension ChatViewController: UITableViewDelegate {
     
     if message.email != user.email { return }
     
-    let alert = UIAlertController(title: kChatAlertTitle,
+    let alert = UIAlertController(title: kChatTitle,
                                   message: kChatAlertSubtitleUpdate,
                                   preferredStyle: .alert)
     
@@ -124,7 +126,7 @@ extension ChatViewController: UITableViewDelegate {
                                     guard let textField = alert.textFields?.first,
                                       let text = textField.text else { return }
                                     
-                                    message.ref?.updateChildValues(["message": text])
+                                    message.ref?.updateChildValues([kMessageRef: text])
     }
     
     let cancelAction = UIAlertAction(title: kChatAlertCancel,
