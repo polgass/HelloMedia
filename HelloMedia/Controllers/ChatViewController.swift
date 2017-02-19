@@ -107,3 +107,35 @@ extension ChatViewController: UITableViewDataSource {
     return cell
   }
 }
+
+extension ChatViewController: UITableViewDelegate {
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+    let message = messages[indexPath.row]
+    
+    if message.email != user.email { return }
+    
+    let alert = UIAlertController(title: kChatAlertTitle,
+                                  message: kChatAlertSubtitleUpdate,
+                                  preferredStyle: .alert)
+    
+    let sendAction = UIAlertAction(title: kChatAlertSend,
+                                   style: .default) { _ in
+                                    guard let textField = alert.textFields?.first,
+                                      let text = textField.text else { return }
+                                    
+                                    message.ref?.updateChildValues(["message": text])
+    }
+    
+    let cancelAction = UIAlertAction(title: kChatAlertCancel,
+                                     style: .default)
+    
+    alert.addTextField()
+    alert.textFields?.first?.text = message.message
+    
+    alert.addAction(sendAction)
+    alert.addAction(cancelAction)
+    
+    present(alert, animated: true, completion: nil)
+  }
+}

@@ -13,6 +13,7 @@ import UIKit
 let kLogin = "LOGIN"
 let kChatAlertTitle = "Chat"
 let kChatAlertSubtitle = "Send a new message"
+let kChatAlertSubtitleUpdate = "Update your message"
 let kChatAlertSend = "Send"
 let kChatAlertCancel = "Cancel"
 
